@@ -3,5 +3,5 @@
 
 # 1. Package installation
 ```
-pip install undetected-chromedriver
+python -m pip install -r requirements.txt
 ```
