@@ -4,10 +4,10 @@ import csv
 
 # url = "https://www.g2.com/categories/seo-tools"
 
-url = "https://www.g2.com/categories/seo-tools?order=g2_score&page=2#product-list"
+url = "https://www.g2.com/categories/seo-tools"
 
-# f = open('g2_page1.txt', 'r')
-# response = f.read()
+f = open('g2_page1.txt', 'r')
+response = f.read()
 
 # f2 = open('g2_page2.txt', 'r')
 # response = f2.read()
@@ -19,7 +19,7 @@ try:
     print(response.text)
 
 # Write response (HTML of page) to a text file, to reduce number of times having to call the API and spend credits
-    f2 = open("g2_page2.txt", "w")
+    f2 = open("g2_page1.txt", "w")
     f2.write(response.text)
     f2.close()
 except: 
@@ -40,4 +40,3 @@ if (response):
             image_link = image_links[index].get('data-deferred-image-src')
             writer.writerow([title.text, image_link])
     
-    # print(titles)
